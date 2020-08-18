@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Main2Activity">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:background="@android:color/holo_red_dark"
+        android:clickable="false"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="Blood Bank"
+        app:titleMarginEnd="200dp">
+
+        <Button
+            android:id="@+id/logout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#00F44336"
+            android:onClick="logout"
+            android:scaleType="centerCrop"
+            android:text="Logout"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            tools:layout_editor_absoluteX="131dp"
+            tools:layout_editor_absoluteY="23dp" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="425dp"
+        android:layout_height="574dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginLeft="2dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar2">
+
+        <LinearLayout
+            android:id="@+id/vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/back"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="50dp"
+                android:background="#FAF7F7"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/imageButton2"
+                    android:layout_width="300dp"
+                    android:layout_height="200dp"
+                    android:layout_gravity="bottom"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="false"
+                    android:clickable="true"
+                    android:foregroundGravity="bottom"
+                    android:scaleType="fitCenter"
+                    android:onClick="requests"
+                    app:srcCompat="@drawable/requests" />
+
+                <ImageButton
+                    android:id="@+id/imageButton"
+                    android:layout_width="300dp"
+                    android:layout_height="200dp"
+                    android:layout_marginLeft="0dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:cropToPadding="true"
+                    android:drawingCacheQuality="high"
+                    android:scaleType="fitXY"
+                    android:tint="#00DD2323"
+                    android:verticalScrollbarPosition="defaultPosition"
+                    android:visibility="visible"
+                    android:onClick="makerequest"
+                    app:srcCompat="@drawable/request" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="175dp"
+                android:layout_marginTop="50dp"
+                android:background="#FAF7F7"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/imageButton4"
+                    android:layout_width="287dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:scaleType="center"
+                    android:onClick="donate"
+                    app:srcCompat="@drawable/donate" />
+
+                <ImageButton
+                    android:id="@+id/imageButton3"
+                    android:layout_width="284dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="0dp"
+                    android:layout_weight="1"
+                    android:onClick="donations"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/donations" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:background="#F8F6F6"
+                android:orientation="horizontal"
+                android:paddingBottom="50dp">
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="500dp"
+                    android:layout_height="350dp"
+                    android:layout_weight="2"
+                    android:onClick="logout"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/pic" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
